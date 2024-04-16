@@ -1,7 +1,5 @@
 <?php
 
-session_start(); 
-
 function login($username, $password, $koneksi) {
 
     $query = "SELECT * FROM tblogin WHERE username = '$username'";
@@ -22,7 +20,7 @@ function login($username, $password, $koneksi) {
 
     if ($password == $db_password) {
         $_SESSION['username'] = $username;
-        header('location: index.php');
+        return true;
         exit();
     } else {
         echo '

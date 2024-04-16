@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once('fungsi.php');
 require_once('koneksi.php');
 
@@ -16,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
